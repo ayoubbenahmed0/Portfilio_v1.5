@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      // Workaround for Windows usernames with apostrophes breaking Workbox SW generation
+      // If the absolute path contains a single quote, disable PWA during build to avoid syntax errors
+      disable: __dirname.includes("'"),
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'sitemap.xml'],
       manifest: {

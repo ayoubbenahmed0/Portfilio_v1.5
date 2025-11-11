@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Edit, Plus } from 'lucide-react';
 import { useContactInfo, useCreateContactInfo, useUpdateContactInfo } from '@/hooks/useSupabase';
@@ -59,7 +59,7 @@ export function ContactInfoForm() {
   const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof ContactInfo, string>>>({});
   const [feedback, setFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
-  const isSubmitting = createMutation.isLoading || updateMutation.isLoading;
+  const isSubmitting = createMutation.isPending || updateMutation.isPending;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,6 +84,10 @@ export function ContactInfoForm() {
         value: validated.value,
         icon: validated.icon,
         description: validated.description || null,
+        // Optional UI fields defaulted for type compatibility
+        bgColor: null,
+        borderColor: null,
+        color: null,
       };
 
       if (formMode === 'edit' && editingId) {

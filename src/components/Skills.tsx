@@ -1,4 +1,4 @@
-import React, { useState, useMemo, Suspense, lazy } from 'react';
+import { useState, useMemo, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/utils/motion';
 import { usePortfolio } from '@/context/PortfolioContext';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { usePortfolio } from '@/context/PortfolioContext';
 import { fadeInUp, staggerContainer } from '@/utils/motion';

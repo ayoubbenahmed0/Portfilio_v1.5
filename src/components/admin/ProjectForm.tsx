@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Trash2, Edit, Plus } from 'lucide-react';
+import { Trash2, Edit } from 'lucide-react';
 import { useProjects, useCreateProject, useUpdateProject, useDeleteProject } from '@/hooks/useSupabase';
 import { fadeInUp, staggerContainer } from '@/utils/motion';
 import type { Project } from '@/types/database';

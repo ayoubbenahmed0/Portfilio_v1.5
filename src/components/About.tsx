@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/utils/motion';
 import { ErrorBoundary } from './3D/ErrorBoundary';
