@@ -47,9 +47,9 @@ export function About() {
             >
               {[
                 { label: 'Experience', value: '5+ Years' },
-                { label: 'Projects', value: '50+' },
-                { label: 'Clients', value: '30+' },
-                { label: 'Countries', value: '10+' },
+                { label: 'Projects', value: '25+' },
+                { label: 'Clients', value: '20+' },
+                { label: 'Countries', value: '2+' },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -66,7 +66,7 @@ export function About() {
             <motion.div variants={fadeInUp}>
               <h3 className="text-xl font-semibold mb-4">Languages</h3>
               <div className="flex flex-wrap gap-2">
-                {['English', 'French', 'Arabic', 'Spanish'].map((lang) => (
+                {['English', 'French', 'Arabic'].map((lang) => (
                   <motion.span
                     key={lang}
                     className="px-4 py-2 glass rounded-full text-sm font-medium border border-primary/30 hover:border-primary/60 transition-all"
