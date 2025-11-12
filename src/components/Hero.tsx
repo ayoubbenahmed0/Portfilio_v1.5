@@ -32,7 +32,7 @@ function HeroImage() {
   
   return (
     <img
-      src="public\images\pdp.png"
+      src="/images/pdp.png"
       alt="Ayoub Ben Ahmed"
       className="w-full h-full object-cover"
       onError={() => setImageError(true)}
